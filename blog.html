@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <a href="./index.html"><div class="logo">Pathum Sandeepa</div></a>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Pathum Sandeepa</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li>
+                        <a href="./index.html" onclick="toggleMenu()">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" onclick="toggleMenu()">About</a>
+                    </li>
+                    <li>
+                        <a href="./projects.html" onclick="toggleMenu()"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./blog.html" onclick="toggleMenu()">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" onclick="toggleMenu()"
+                            >Contact</a
+                        >
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="blogs-card-section">
+            <div class="container">
+                <!-- Blog Card 1 -->
+                <a href="./blog-01.html" target="_blank">
+                    <div class="blog-card">
+                        <h3 class="card-title">
+                            Exploring Laravel Middleware in Web Development
+                        </h3>
+                        <p class="card-intro">
+                            Learn the basics of Laravel Middleware, its
+                            importance in HTTP requests, and how to create and
+                            apply custom middleware to routes in Laravel.
+                        </p>
+                        <a href="#blog-01" class="read-more">Read More</a>
+                    </div>
+                </a>
+
+                <!-- Blog Card 2 -->
+                <a href="./blog-02.html" target="_blank">
+                    <div class="blog-card">
+                        <h3 class="card-title">
+                            Handling Form Submission in Next.js
+                        </h3>
+                        <p class="card-intro">
+                            Discover how to handle form submissions in Next.js
+                            with a step-by-step guide on creating forms,
+                            handling submissions, and processing data
+                            server-side.
+                        </p>
+                        <a href="#blog-02" class="read-more">Read More</a>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2024 Pathum Sandeepa. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

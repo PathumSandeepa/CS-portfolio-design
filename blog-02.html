@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>contact-me</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <a href="./index.html"><div class="logo">Pathum Sandeepa</div></a>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Pathum Sandeepa</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li>
+                        <a href="./index.html" onclick="toggleMenu()">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" onclick="toggleMenu()">About</a>
+                    </li>
+                    <li>
+                        <a href="./projects.html" onclick="toggleMenu()"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./blog.html" onclick="toggleMenu()">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" onclick="toggleMenu()"
+                            >Contact</a
+                        >
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="full-blog-content">
+            <div class="container">
+                <h2 class="blog-title">Handling Form Submission in Next.js</h2>
+                <p class="intro">
+                    Form handling is an essential part of web development. With
+                    Next.js, you have several options for managing form
+                    submissions efficiently. In this blog, we’ll walk through
+                    setting up a basic form in Next.js, handling its submission,
+                    and processing the data server-side.
+                </p>
+
+                <div class="content">
+                    <h3 class="sub-heading">
+                        Creating a Basic Form in Next.js
+                    </h3>
+                    <p>
+                        To create a form in Next.js, you can start by setting up
+                        a simple form component in a .js or .jsx file. You can
+                        use the built-in form element and define the action
+                        attribute if you want to handle the form submission on a
+                        specific route. However, in most cases, it’s more
+                        efficient to handle the form data using JavaScript
+                        functions.
+                    </p>
+
+                    <h3 class="sub-heading">Handling Form Submission</h3>
+
+                    <p>
+                        One of the most common methods to handle form submission
+                        is by adding an onSubmit handler to the form element.
+                        This function can prevent the default form submission
+                        and allow you to work with the form data directly.
+                    </p>
+
+                    <code>
+                        function handleSubmit(event) {<br />
+                        &nbsp;&nbsp;event.preventDefault();<br />
+                        &nbsp;&nbsp;const formData = new
+                        FormData(event.target);<br />
+                        &nbsp;&nbsp;console.log(Object.fromEntries(formData));<br />
+                        }<br />
+                    </code>
+
+                    <p>
+                        Using this function, you can access and manipulate the
+                        form data directly. You can send this data to a server
+                        endpoint using Fetch or Axios for further processing.
+                    </p>
+
+                    <h3 class="sub-heading">
+                        Processing Form Data on the Server
+                    </h3>
+                    <p>
+                        To apply middleware to a route, use the
+                        <code>->middleware()</code> method within the route
+                        declaration, or assign it in the controller constructor.
+                    </p>
+                </div>
+
+                <form class="comment-form" action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2024 Pathum Sandeepa. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

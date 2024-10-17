@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>contact-me</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <a href="./index.html"><div class="logo">Pathum Sandeepa</div></a>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Pathum Sandeepa</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li>
+                        <a href="./index.html" onclick="toggleMenu()">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" onclick="toggleMenu()">About</a>
+                    </li>
+                    <li>
+                        <a href="./projects.html" onclick="toggleMenu()"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./blog.html" onclick="toggleMenu()">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" onclick="toggleMenu()"
+                            >Contact</a
+                        >
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="full-blog-content">
+            <div class="container">
+                <h2 class="blog-title">
+                    Exploring Laravel Middleware in Web Development
+                </h2>
+                <p class="intro">
+                    Laravel Middleware is a powerful tool for handling HTTP
+                    requests and responses within a Laravel application. In this
+                    blog, we’ll explore the fundamentals of middleware, why it’s
+                    essential, and how you can implement it in your own
+                    projects.
+                </p>
+
+                <div class="content">
+                    <h3 class="sub-heading">What is Middleware?</h3>
+                    <p>
+                        Middleware acts as a bridge between a request and
+                        response in a Laravel application. It provides a
+                        convenient way to filter or modify HTTP requests and
+                        responses, making it a valuable tool for handling
+                        authentication, logging, and more. Middleware can be
+                        applied to individual routes or globally to an entire
+                        application.
+                    </p>
+
+                    <h3 class="sub-heading">How to Create Custom Middleware</h3>
+                    <p>
+                        Creating custom middleware in Laravel is
+                        straightforward. You can generate middleware using the
+                        Artisan command:
+                    </p>
+                    <code>php artisan make:middleware CheckAge</code>
+
+                    <p>
+                        This command will create a new middleware class under
+                        the <code>app/Http/Middleware</code> directory. Within
+                        this class, you can define logic to handle requests
+                        before they reach your controllers. For example, you
+                        could create middleware to restrict access to specific
+                        routes based on age, role, or other criteria.
+                    </p>
+
+                    <h3 class="sub-heading">Using Middleware in Your Routes</h3>
+                    <p>
+                        To apply middleware to a route, use the
+                        <code>->middleware()</code> method within the route
+                        declaration, or assign it in the controller constructor.
+                    </p>
+                </div>
+
+                <form class="comment-form" action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2024 Pathum Sandeepa. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
