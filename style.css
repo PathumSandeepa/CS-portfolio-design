@@ -770,6 +770,10 @@ textarea.input1 {
 }
 
 @media screen and (max-width: 768px) {
+    .menu-links{
+        z-index: 1;
+    }
+    
     #contact,
     footer {
         height: 40vh;
@@ -821,7 +825,7 @@ textarea.input1 {
     }
 
     .contact-section-container {
-        max-width: 350px;
+        max-width: 400px;
     }
 
     .contact-section {
